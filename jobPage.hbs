@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevAlert | Remote Job Postings</title>
+	<link rel="stylesheet" type="text/css" href="css/jobPage.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel='stylesheet' href='stylesheets/jobPage.css' />
+    <link rel="shortcut icon" href="images/code2.png" type="image/x-icon">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139612600-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-139612600-1');
+  </script>
+
+</head>
+<body class="ci-body">
+
+<body class="ci-body">
+  {{!-- Sidebar Mobile Wrapper --}}
+  <div class="mobile-wrapper">
+
+  </div>
+
+  {{> header }}
+
+
+  <div class="container ci-bread">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb ci-breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">All Jobs</li>
+          </ol>
+        </nav>
+  </div>
+
+  <header id="ci-header">
+    <div class="container">
+      <h1>Remote Developer Job</h1>
+    </div>
+  </header>
+
+
+
+
+  <section id="main">
+    <div class="container">
+        <div class="row">
+      <div class="col-md-3 col-sm-12">
+         <div class="row">
+              <div class="col-md-12 col-sm-12">
+              <div class="form-group ci-form-group">
+                    <select id="inputState" class="form-control">
+                      <option selected>Choose Location</option>
+                      <option>Canada</option>
+                      <option>Germany</option>
+                      <option>India</option>
+                      <option>Nigeria</option>
+                      <option>UK</option>
+                      <option>US</option>
+                    </select>
+                  </div>
+                </div>
+
+          </div>
+       
+            <div class="list-group">
+                <a class="list-group-item  main-title">Job Category </a>
+                  <a href=" " class="list-group-item">All Jobs</a>
+                   <a class="list-group-item" id="fullTime"> Full Time</a>
+                   <a class="list-group-item" id="partTime">Part Time</a>
+                  <a class="list-group-item" id="contract"> Contract </a>
+
+            </div>
+   </div>
+
+
+
+        <div class="col-md-9">
+          <!-- Job Listing -->
+
+          <div class="row">
+             <div class="col-md-12 col-sm-12 ci-search">
+                 <div class="input-group mb-4">
+                    <input id="searchInput"  type="search" class="form-control"  placeholder="Search with Keyword, Location, company">
+                  <div class="input-group-prepend">
+                      <div class="input-group-text bg-deep" id="searchButton"><i class="fa fa-search search-white"></i></div>
+                  </div>
+                 </div>
+                
+             </div>
+             </div>
+
+
+
+          <div>
+            <div class="ci-card">
+              <div class="col-md-12" id="jobTable">
+                <div class="">
+                  <h3 class="ci-head">ALL JOBS</h3>
+                  <div class="dropdown ci-option">
+                    <button class="btn ci-btn-second dropdown-toggle" type="button" id="dropdownMenuButton"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Shows: <span class="ci-drop">All Jobs</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Full Time</a>
+                      <a class="dropdown-item" href="#">Part Time</a>
+                      <a class="dropdown-item" href="#">Contract</a>
+                    </div>
+                  </div>
+                </div>
+
+                {{# each content}}
+                <div class="ci-card" id="contentCard">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-1 col-sm-12">
+                          <img class="img-res" src="{{this.company_logo}}">
+                        </div>
+                        <div class="col-md-7 ci-title">
+                         <a href="jobs/{{this.custom_url}}"><h3>{{this.title}} <br><span class="ci-job-nature">{{this.type}}</span></h3></a> 
+                          <h4 class="ci-company">{{this.company}}</h4>
+                        </div>
+                        <div class="col-md-4 ci-position">
+                          <p class="ci-pay-range">Pay Range</p>
+                          <a href="/jobs/{{this.custom_url}}" class="btn btn-outline-primary ci-pos">Read More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-0">
+
+              </div>
+              <div class="col-md-12 ">
+                <nav class="ci-nav" aria-label="Page navigation example">
+                  <ul class="pagination ci-pagination">
+                    {{#if buttons.previous}}
+                    <li class="page-item ci-page-item">
+                      <a class="page-link" href="jobs?page={{buttons.previous}}" aria-label="Previous">
+                        <span aria-hidden="true"></span>
+                        <span>Previous</span>
+                      </a>
+                    </li>
+                    {{/if}}
+                    {{{helpers.populate_links}}}
+                    {{#if buttons.next}}
+                    <li class="page-item ci-page-item">
+                      <a class="page-link" href="jobs?page={{buttons.next}}" aria-label="Next">
+                      <span aria-hidden="true"></span>
+                      <span>Next</span>
+                      </a>
+                    </li>
+                    {{/if}}
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-md-0">
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  {{> footer}}
+  <script>
+    $(document).ready(function () {
+      $("#searchButton").on("click", function () {
+        let value = $("#searchInput").val().toLowerCase();
+        $("#jobTable #contentCard").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+      $("#searchInput").on("keypress", function (e) {
+        if (e.which === 13) {
+          let value = $(this).val().toLowerCase();
+          $("#jobTable #contentCard").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        }
+      });
+      
+      $("#fullTime").on("click", function () {
+        const job = "Full Time";
+        const value = job.toLowerCase();
+        $("#jobTable #contentCard").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+
+      $("#partTime").on("click", function () {
+        const job = "Part Time";
+        const value = job.toLowerCase();
+        $("#jobTable #contentCard").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+
+      $("#contract").on("click", function () {
+        const job = "Contract";
+        const value = job.toLowerCase();
+        $("#jobTable #contentCard").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  {{!-- <script>
+     $(document).ready(function () {
+      $("#searchButton").on("click", function () {
+        let value = $("#searchInput").val().toLowerCase();
+        $("#jobTable #contentCard").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+      $("#searchInput").on("keypress", function (e) {
+        if (e.which === 13) {
+          let value = $(this).val().toLowerCase();
+          $("#jobTable #contentCard").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        }
+      });
+    });
+  </script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  {{!-- <script src="js/bootstrap.bundle.min"></script>
+  <script src="js/bootstrap.min.js"></script> --}}
+</body>
+
+</html>

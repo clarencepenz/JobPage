@@ -1,0 +1,446 @@
+.ci-body{
+    margin: 0;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  #fullTime:hover {
+    cursor: pointer;
+  }
+  #partTime:hover {
+    cursor: pointer;
+  }
+
+  #contract:hover {
+    cursor: pointer;
+  }
+
+  /* Page Title*/
+  .ci-body #ci-header h1{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    align-items: center;
+    text-align: center;
+      color: #11144C;
+      padding: 40px;
+  }
+
+
+  .ci-breadcrumb{
+    background-color: #66000000;
+  }
+
+  .ci-bread{
+    padding-top: 10px;
+  }
+  /* category*/
+
+  .ci-body .main-title{
+    color: #11144c!important;
+    font-weight: bold;
+  }
+
+  .ci-form-group{
+    padding-bottom: 7px;
+  }
+
+  .ci-body .list-group a{
+    color: #222222;
+    padding-bottom: 5px;
+    font-size: 16px;
+  }
+
+  .ci-body .list-group{
+    border: 1px solid #c4c4c4;
+    margin-bottom: 20px;
+    box-shadow: 2px 7px 12px 10px #f3f3f3;
+  }
+
+
+  .ci-body .list-group-item{
+    border: none!important;
+  }
+
+  .ci-body .ci-last{
+    margin-bottom: 15px;
+  }
+
+
+
+
+
+  /*Filter Bar*/
+  .ci-body .bg-deep{
+    background-color: #11144C !important;
+    cursor: pointer;
+  }
+  .ci-body i.search-white{
+    color: white;
+    cursor: pointer;
+  }
+
+
+
+
+  /* Job role*/
+  .ci-btn-secondary{
+    background-color: #66000000;
+    border: 1px solid #c4c4c4;
+    margin-left: 0px;
+    width: 17vw;
+  }
+
+  /* Filter jobs*/
+  .ci-btn-second{
+    background-color: #66000000;
+    color: #6A707E;
+  }
+
+  .ci-head{
+    font-size: 16px;
+    margin-top: -10px;
+    color: #334D6E;
+  }
+
+
+  .ci-option{
+    float: right;
+    margin-top: -40px;
+    padding-right: 5px;
+    font-size: 16px;
+    color: #6A707E;
+  }
+
+
+  .ci-drop{
+    color: #109CF1;
+  }
+
+
+  .ci-pay-range{
+    color: #85bb65;
+  }
+
+  /* job list view*/
+
+    .img-res{
+    width: 400%;
+    max-width: 200px;
+    height: auto;
+    padding-left: 38px!important;
+  }
+
+
+  .ci-card{
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border: 1px solid #c4c4c4;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px 10px #f3f3f3;
+    background-color: #fff;
+    position: relative;
+
+  }
+
+  .ci-body .card{
+    border: none!important;
+  }
+
+
+
+  /* Read more button*/
+  .ci-body #main .ci-btn{
+    text-decoration: none;
+    padding: 0.7rem;
+    text-transform: uppercase;
+    color: #000000;
+    border: 1px solid #109CF1;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+
+  /*For job description*/
+  .ci-job-nature{
+    font-size: 16px;
+    margin-top: -10px;
+  }
+
+
+  .ci-position{
+    padding-left: 90px;
+  }
+
+  .ci-pos{
+    position: absolute;
+    bottom: 0;
+  }
+
+
+  .ci-title{
+    padding-left: 115px;
+
+  }
+
+  .ci-title h3{
+    color: #11144c;
+    font-weight: 600;
+
+  }
+
+  .ci-title span{
+    color: #222222;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    opacity: 0.7;
+  }
+
+
+  .ci-company{
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    color: #222222;
+    opacity: 0.7;
+    line-height: 28px;
+  }
+
+
+  /*Pagination*/
+
+  .ci-nav{
+    padding-top: 10px;
+    margin-bottom: 70px;
+    display: flex;
+  }
+
+
+  .ci-pagination{
+    margin: auto;
+
+  }
+
+  .page-link{
+  border: none!important;
+  }
+
+
+ 
+
+
+  @media (max-width: 1173px){
+
+     .img-res{
+    width: 700%;
+    max-width: 200px;
+    height: auto;
+    padding-left: 38px!important;
+  }
+
+    .ci-title{
+    padding-left: 145px;
+
+  }
+
+
+
+  .ci-body .card{
+    border: none!important;
+      
+  }
+
+  .ci-company{
+    margin-top: 50px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    color: #222222;
+    opacity: 0.7;
+    line-height: 28px;
+  }
+
+   .ci-position{
+    padding-left: 50px;
+  }
+
+   
+  }
+
+   @media (max-width: 1110px){
+     .img-res{
+    width: 700%;
+    max-width: 200px;
+    height: auto;
+    padding-left: 38px!important;
+  }
+
+  }
+
+  @media (max-width: 994px){
+     .img-res{
+    width: 1100%;
+    max-width: 100px;
+    height: auto;
+    
+  }
+
+
+  .ci-title{
+      padding-left: 120px;
+
+    }
+
+  .ci-nav{
+    padding-left: 40px;
+    margin-bottom: 70px;
+  }
+
+ 
+
+
+  .ci-pagination{
+    padding-left: 20px;
+    padding-top: 15px;
+
+  }
+
+  .page-link{
+    border: none!important;
+  }
+
+  .ci-btn-secondary{
+    background-color: #66000000;
+    border: 1px solid #f4f4f4;
+    margin-left: 0px;
+    width: 19.5vw;
+  }
+
+  .ci-body .card{
+    border: none!important;
+      /*height: 230px;*/
+  }
+
+  .ci-company{
+    margin-top: 40px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    color: #222222;
+    opacity: 0.7;
+    line-height: 28px;
+  }
+
+     .ci-position{
+    padding-left: 40px;
+  }
+
+
+
+}
+
+
+    @media (max-width: 800px){
+
+     .img-res{
+    width: 1100%;
+    max-width: 200px;
+    height: auto;
+    padding-left: 38px!important;
+  }
+}
+
+
+  @media (max-width: 767px){
+
+        .ci-pos{
+        position: relative;
+        width: 80%;
+        bottom: 0;
+    }   
+
+         .ci-position{
+           padding-left: 60px;
+    }
+
+}
+
+    @media (max-width: 776px){
+    
+        .ci-title{
+          padding-left: 100px;
+    }
+  }
+
+
+
+  @media (max-width: 750px){
+
+    .ci-pos{
+    position: relative;
+    width: 80%!important;
+    bottom: 0;
+  }
+
+  .ci-body .list-group{
+    border: 1px solid #c4c4c4;
+    margin-bottom: 20px;
+    box-shadow: 2px 7px 12px 10px #f3f3f3;
+  }
+
+
+  .ci-pay-range{
+    padding-top: 10px;
+  }
+
+    .ci-position{
+    
+    padding-left: 50px;
+  }
+
+  .ci-nav{
+    padding-left: 15px;
+    margin-bottom: 70px;
+  }
+
+  .ci-search{
+    padding-top: 10px;
+  }
+
+  .btn-outline-primary{
+    width: 100%;
+  }
+
+  .ci-title{
+    padding-left: 50px;
+  }
+
+
+  .ci-company{
+    margin-top: 20px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    color: #222222;
+    opacity: 0.7;
+    line-height: 28px;
+  }
+
+  .page-link{
+       border: none!important;
+  }
+
+  .ci-btn-secondary{
+    background-color: #66000000;
+    border: 1px solid #f4f4f4;
+    margin-left: 0px;
+    width: 84.5vw;
+  }
+}
